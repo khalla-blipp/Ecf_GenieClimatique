@@ -26,6 +26,15 @@ class UserFixtures extends Fixture
            "azert789"
        ));
 
+       $user = new User() ;
+       $user->setEmail('madou@pati.fr');
+       $user->setRoles(["ROLE_USER"]) ;
+       $user->setPassword($this->passwordEncoder->encodePassword(
+           $user,
+           "azert741"
+       ));
+
+
        $manager->persist($user);
        $manager->flush();
     }
