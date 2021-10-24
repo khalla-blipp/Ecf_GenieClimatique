@@ -1,0 +1,90 @@
+                         
+
+                                                    ECF GENIECLIMATIQUE 
+
+ENVIRONNEMENT DE TRAVAIL :
+
+Installation de Visual Studio Code(vsc) et de Php Storm .
+
+Installation de Composer et de Symfony Cli.
+
+Vérifier si tout mon environnement de travail est complet avec la commande 
+ 
+   - symfony check:requirements
+   - installation de xampp panel de control (BDD) 
+  
+Creation de mon Project Symfony 
+
+  - symfony new Ecf_GenieClimatique --full
+  - Démarer le serveur local : symfony server:start
+
+Gestion de la sécurité de l'application 
+    
+   - installer le bundle avec la commande :
+
+composer require symfony/securite-bundle 
+
+composer require symfony/maker --dev
+
+
+Authentification pour se connecter a l'application (login)
+
+    - php bin/console make:user
+    - composer req orm
+    - hacher le mot de passe ( pack doctrine)
+
+la commande php bin/console make:auth
+
+   -composer req twig pour les templates .
+
+Création de la base de données ecf_geni avec mysql 
+
+  - php bin/console doctrine:database:create
+  - configuration de la base de données dans le document Env
+  - php bin/console migrations:migrate
+
+Creation de mes classes d'entités 
+
+  - class User , Officine , Technicien
+
+Générer une nouvelle migration :
+
+    - php bin/console make:migration
+
+Execution de la Migration
+
+ - php bin/console doctrine:migrations:migrate
+
+Creation de mes controlleurs 
+
+   - php bin/console make:controller 
+
+Installation du Panneau de configuration avec easybundle ( dashbord )
+
+   - CRUD intégration dans mon entité 
+   
+   - php bin/console make:admin:dashboard
+
+   - Configuration du menu 
+
+Création d'un fichier de fixture et éxecuter le fichier
+
+    - php bin/console doctrineFixture:load
+
+
+
+Déployer mon site web sur héroku
+
+   - lien du site sur heroku : https://powerful-castle-67578.herokuapp.com/login
+
+   - lien du site : https://127.0.0.1:8000/admin pour se connecter au tableau de bord 
+   
+    - pour la page du login : https://127.0.0.1:8000/login  afficher la page 
+
+    - on peut se connecter avec l'email mamadou@pati.fr MP: azert789   https://127.0.0.1:8000/admin
+
+
+
+
+
+   
